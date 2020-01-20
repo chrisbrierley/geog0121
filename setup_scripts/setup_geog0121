@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Set up environment GEOG0121 - Climate Modelling
+
+py_dir=/home/geogg134/world/python # Customise for your installation
+geog0121_conda_dir=/home/geogg134/.conda
+
+cd ~/ #move to home directory
+mkdir -p geog0121
+
+cd ~/geog0121
+ln -s $py_dir Read_Only_Notebooks
+cp $py_dir/Jupyter_Introduction.ipynb .
+
+cd ~/
+
+if [ ! -d ".conda" ]
+then
+    cp -r $geog0121_conda_dir .conda
+else
+    cd .conda/
+    if [ -d "envs/geog0121" ]
+    then
+        # geog0121 environment already exists. Advise how to update it.
+        echo "You already have a geog0121 environment setup with conda. If you need to update it, in a terminal please type:"
+        cp $py_dir/environment_geog0121.yml ~/geog0121
+        echo "  cd ~/geog0121; conda env update --prefix ./env --file environment.yml  --prune"
+    else
+        # Add the geog0121 environment with a manual copy
+        cp -r $geog0121_conda_dir/envs/geog0121 envs/geog0121
+        cat $geog0121_conda_dir/environments.txt >> environments.txt
+        cd pkgs/ 
+        cp -rn $geog0121_conda_dir/pkgs/*  .
+    fi
+    cd ~/
+fi
+
+cd ~/Desktop
+cp $py_dir/Geog0121\ Notebook.desktop .
