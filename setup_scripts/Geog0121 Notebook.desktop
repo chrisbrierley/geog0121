@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Terminal=true
-Icon[en_GB]=mate-panel-launcher
-Name[en_GB]=Geog0121 Notebook
-Exec=source activate geog0121 ; Jupyter\\ Notebook
-Name=j3
-Icon=/opt/anaconda/pkgs/notebook-5.0.0-py27h3661c2b_2/info/icon.png
