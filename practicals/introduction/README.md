@@ -6,7 +6,7 @@ This practical can be run in the cloud using the Pangeo resources, by clicking o
 [![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/chrisbrierley/geog0121/master)
 
 ## Practical Description
-This practical will introduce you to the way that we will be interacting with the programming content of the course. You should open start with the Jupyter Introduction notebook and then progress onto te ones abotu Python and Numpy. 
+This practical will introduce you to the way that we will be interacting with the programming content of the course. You should open start with the Jupyter Introduction notebook and then progress onto the ones about Python and Numpy. 
 
 ## Full series of practicals
 1. Introduction
