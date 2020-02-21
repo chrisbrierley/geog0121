@@ -19,6 +19,8 @@ do
   ncrename -v lat2d_ice_nh,latitude -v lon2d_ice_nh,longitude tmp.nc
   ncatted -a coordinates,sic*,o,c,"type latitude longitude" tmp.nc
   #NOTE THIS SEA ICE FIX DOES NOT YET WORK PROPERLY ;-(
+  #Remove any valid_range and actual_range variables
+  ncatted -a valid_range,,d,, -a actual_range,,d,, tmp.nc
   cp tmp.nc $fil
 done
 
