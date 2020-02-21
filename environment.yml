@@ -32,3 +32,4 @@ dependencies:
   - zarr
   # xarray-related
   - xgcm
+  - nc-time-axis
