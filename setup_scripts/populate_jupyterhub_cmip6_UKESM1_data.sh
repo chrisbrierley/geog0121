@@ -62,3 +62,13 @@ do
 done
 cd $LOCAL_DIR
 
+moc_files="historical/Omon/msftyz/gn/v20190815/msftyz_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc historical/Omon/msftyz/gn/v20190815/msftyz_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc ssp126/Omon/msftyz/gn/v20190816/msftyz_Omon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_201501-204912.nc ssp126/Omon/msftyz/gn/v20190816/msftyz_Omon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_205001-210012.nc ssp245/Omon/msftyz/gn/v20190819/msftyz_Omon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_201501-204912.nc ssp245/Omon/msftyz/gn/v20190819/msftyz_Omon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_205001-210012.nc ssp370/Omon/msftyz/gn/v20190819/msftyz_Omon_UKESM1-0-LL_ssp370_r1i1p1f2_gn_201501-204912.nc ssp370/Omon/msftyz/gn/v20190819/msftyz_Omon_UKESM1-0-LL_ssp370_r1i1p1f2_gn_205001-210012.nc ssp585/Omon/msftyz/gn/v20190819/msftyz_Omon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc ssp585/Omon/msftyz/gn/v20190819/msftyz_Omon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-210012.nc"
+for fil in $moc_files
+do
+  cd ${fil%%/*}
+  wget $WEB_SERVER/$fil
+  cd ..
+done
+cd $LOCAL_DIR
+
+
