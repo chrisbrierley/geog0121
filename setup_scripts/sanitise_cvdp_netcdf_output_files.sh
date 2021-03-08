@@ -12,11 +12,11 @@ ncrcat -O -v time /data/CMIP/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/Amo
 for fil in $files
 do
   # remove a few niche fields that include additional wierd time axes (and calendars)
-  ncks -O -x -v time_mon1,time_mon2,time_mon3,nino34_autocorrelation,nino34_hov_elnino,nino34_hov_lanina,nino34_monthly_stddev,time_lag_cor,amoc_amo_lag_cor $fil tmp.nc
+  ncks -O -C -x -v time_mon1,time_mon2,time_mon3,nino34_autocorrelation,nino34_hov_elnino,nino34_hov_lanina,nino34_monthly_stddev,time_lag_cor,amoc_amo_lag_cor $fil tmp.nc
   # overwrite with the time variable from CMIP6 data itself
   ncks -A tmp.all_time.nc tmp.nc 
   # rename the ice coordinates (to let Panoply plot them)
-  ncrename -v lat2d_ice_nh,latitude -v lon2d_ice_nh,longitude tmp.nc
+  ncrename -v .lat2d_ice_nh,latitude -v .lon2d_ice_nh,longitude tmp.nc
   ncatted -a coordinates,sic*,o,c,"type latitude longitude" tmp.nc
   #NOTE THIS SEA ICE FIX DOES NOT YET WORK PROPERLY ;-(
   #Remove any valid_range and actual_range variables
