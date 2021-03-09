@@ -71,4 +71,11 @@ do
 done
 cd $LOCAL_DIR
 
-
+full_ocean_files="additional_files/so_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-189912.nc additonal_files/so_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_190001-194912.nc additonal_files/so_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-199912.nc additonal_files/so_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_200001-201412.nc additonal_files/so_Omon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_201501-204912.nc additonal_files/so_Omon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_205001-209912.nc additonal_files/so_Omon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_210001-210012.nc additonal_files/so_Omon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc additonal_files/so_Omon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-209912.nc additonal_files/so_Omon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_210001-210012.nc additonal_files/thetao_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-189912.nc additonal_files/thetao_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_190001-194912.nc additonal_files/thetao_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-199912.nc additonal_files/thetao_Omon_UKESM1-0-LL_historical_r1i1p1f2_gn_200001-201412.nc additonal_files/thetao_Omon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_201501-204912.nc additonal_files/thetao_Omon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_205001-209912.nc additonal_files/thetao_Omon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_210001-210012.nc additonal_files/thetao_Omon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc additonal_files/thetao_Omon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-209912.nc additonal_files/thetao_Omon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_210001-210012.nc"
+for fil in $full_ocean_files
+do
+  cd ${fil%%/*}
+  wget $WEB_SERVER/$fil
+  cd ..
+done
+cd $LOCAL_DIR
