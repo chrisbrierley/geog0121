@@ -79,3 +79,21 @@ do
   cd ..
 done
 cd $LOCAL_DIR
+
+evap_files="additional_files/evspsbl_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc additional_files/evspsbl_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc additional_files/evspsbl_Amon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_201501-204912.nc additional_files/evspsbl_Amon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_205001-210012.nc additional_files/evspsbl_Amon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc additional_files/evspsbl_Amon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-210012.nc additional_files/evspsbl_Amon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_201501-204912.nc additional_files/evspsbl_Amon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_205001-210012.nc"
+for fil in $evap_files
+do
+  cd ${fil%%/*}
+  wget $WEB_SERVER/$fil
+  cd ..
+done
+cd $LOCAL_DIR
+
+psl_files="additional_files/psl_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-19491230.nc additional_files/psl_day_UKESM1-0-LL_historical_r1i1p1f2_gn_19500101-20141230.nc additional_files/psl_day_UKESM1-0-LL_ssp126_r1i1p1f2_gn_20150101-20491230.nc additional_files/psl_day_UKESM1-0-LL_ssp126_r1i1p1f2_gn_20500101-21001230.nc additional_files/psl_day_UKESM1-0-LL_ssp245_r1i1p1f2_gn_20150101-20491230.nc additional_files/psl_day_UKESM1-0-LL_ssp245_r1i1p1f2_gn_20500101-21001230.nc additional_files/psl_day_UKESM1-0-LL_ssp370_r1i1p1f2_gn_20150101-20491230.nc additional_files/psl_day_UKESM1-0-LL_ssp370_r1i1p1f2_gn_20500101-21001230.nc additional_files/psl_day_UKESM1-0-LL_ssp585_r1i1p1f2_gn_20150101-20491230.nc additional_files/psl_day_UKESM1-0-LL_ssp585_r1i1p1f2_gn_20500101-21001230.nc"
+for fil in $psl_files
+do
+  cd ${fil%%/*}
+  wget $WEB_SERVER/$fil
+  cd ..
+done
+cd $LOCAL_DIR
