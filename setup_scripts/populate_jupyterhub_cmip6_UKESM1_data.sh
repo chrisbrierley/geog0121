@@ -97,3 +97,14 @@ do
   cd ..
 done
 cd $LOCAL_DIR
+
+land_files="additional_files/cLand_Emon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc additional_files/cLand_Emon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc additional_files/cLand_Emon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_201501-204912.nc additional_files/cLand_Emon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_205001-210012.nc additional_files/cLand_Emon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_201501-204912.nc additional_files/cLand_Emon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_205001-210012.nc additional_files/cLand_Emon_UKESM1-0-LL_ssp370_r1i1p1f2_gn_201501-204912.nc additional_files/cLand_Emon_UKESM1-0-LL_ssp370_r1i1p1f2_gn_205001-210012.nc additional_files/cLand_Emon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc additional_files/cLand_Emon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-210012.nc additional_files/cVeg_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc additional_files/cVeg_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc additional_files/cVeg_Lmon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_201501-204912.nc additional_files/cVeg_Lmon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_205001-210012.nc additional_files/cVeg_Lmon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_201501-204912.nc additional_files/cVeg_Lmon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_205001-210012.nc additional_files/cVeg_Lmon_UKESM1-0-LL_ssp370_r1i1p1f2_gn_201501-204912.nc additional_files/cVeg_Lmon_UKESM1-0-LL_ssp370_r1i1p1f2_gn_205001-210012.nc additional_files/cVeg_Lmon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc additional_files/cVeg_Lmon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-210012.nc additional_files/mrsll_Emon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc additional_files/mrsll_Emon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc additional_files/mrsll_Emon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_201501-204912.nc additional_files/mrsll_Emon_UKESM1-0-LL_ssp126_r1i1p1f2_gn_205001-210012.nc additional_files/mrsll_Emon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_201501-204912.nc additional_files/mrsll_Emon_UKESM1-0-LL_ssp245_r1i1p1f2_gn_205001-210012.nc additional_files/mrsll_Emon_UKESM1-0-LL_ssp370_r1i1p1f2_gn_201501-204912.nc additional_files/mrsll_Emon_UKESM1-0-LL_ssp370_r1i1p1f2_gn_205001-210012.nc additional_files/mrsll_Emon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc additional_files/mrsll_Emon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-210012.nc
+"
+for fil in $land_files
+do
+  cd ${fil%%/*}
+  wget $WEB_SERVER/$fil
+  cd ..
+done
+cd $LOCAL_DIR
+
