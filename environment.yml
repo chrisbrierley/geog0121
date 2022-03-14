@@ -1,0 +1,19 @@
+name: geog0121
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9.10
+  - cartopy=0.20.0
+  - cftime=1.5.2
+  - dask=2022.2.0
+  - jupyter=1.0.0
+  - nb_conda=2.2.1
+  - nc-time-axis=1.4.0
+  - netcdf4=1.5.8
+  - numpy=1.22.2
+  - matplotlib=3.5.1
+  - pandas=1.4.1
+  - scipy=1.8.0
+  - regionmask=0.8.0
+  - urllib3=1.26.8
+  - xarray=0.21.1
