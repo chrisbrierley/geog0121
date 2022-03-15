@@ -1,6 +1,7 @@
-name: geog0111
+name: geog0121-2021
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - matplotlib-base
   - python[version='>=3.7']
@@ -49,3 +50,4 @@ dependencies:
   - jupyter
   - yapf
   - xlrd
+  - xclim
