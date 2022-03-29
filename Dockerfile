@@ -13,7 +13,7 @@ RUN conda update conda -y --quiet && conda clean --all -y --quiet
 
 # --- Load geog0121 environment into conda ---
 RUN conda env create -f environment.yml --quiet
-RUN source activate geog0121
+RUN source activate geog0121-2022
 
 # --- Script to run when starting the Docker image ---
 ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "geog0121", "jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
