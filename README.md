@@ -16,4 +16,4 @@ You can clone this repository and run all the practicals, either on your own com
 - Ensure Docker Desktop is running
 - Clone this repo & navigate to repo directory in terminal
 - Build the image by running `docker build -t geog0121 .`
-- Load a container by running `docker run -i --rm --volume=${PWD}/practicals:/home/docker/geog0121 -w /home/docker/geog0121 -p 8888:8888 -t geog0121`
+- Load the container by running `docker run -i --rm --volume=${PWD}/practicals:/home/docker/geog0121 -w /home/docker/geog0121 -p 8888:8888 -t geog0121`
