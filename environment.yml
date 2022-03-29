@@ -1,4 +1,4 @@
-name: geog0121
+name: geog0121-2022
 channels:
   - conda-forge
 dependencies:

@@ -108,3 +108,12 @@ do
 done
 cd $LOCAL_DIR
 
+cloud_files="additional_files/cl_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-189912.nc additional_files/clt_Amon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc additional_files/cl_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_190001-194912.nc additional_files/clt_Amon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-210012.nc additional_files/cl_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-199912.nc additional_files/conccn_Emon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-189912.nc additional_files/cl_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_200001-201412.nc additional_files/conccn_Emon_UKESM1-0-LL_historical_r1i1p1f2_gn_190001-194912.nc additional_files/cl_Amon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc additional_files/conccn_Emon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-199912.nc additional_files/cl_Amon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-209912.nc additional_files/conccn_Emon_UKESM1-0-LL_historical_r1i1p1f2_gn_200001-201412.nc additional_files/cl_Amon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_210001-210012.nc additional_files/conccn_Emon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_201501-204912.nc additional_files/clt_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc additional_files/conccn_Emon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_205001-209912.nc additional_files/clt_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc additional_files/conccn_Emon_UKESM1-0-LL_ssp585_r1i1p1f2_gn_210001-210012.nc"
+for fil in $cloud_files
+do
+  cd ${fil%%/*}
+  wget $WEB_SERVER/$fil
+  cd ..
+done
+cd $LOCAL_DIR
+
