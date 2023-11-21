@@ -128,6 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# MacOS
+.DS_Store
+
 # netcdf data files
 .nc
 *.nc
