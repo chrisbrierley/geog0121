@@ -131,3 +131,6 @@ dmypy.json
 # netcdf data files
 .nc
 *.nc
+
+# hide the data folder
+data
