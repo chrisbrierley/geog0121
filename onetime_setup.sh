@@ -8,7 +8,7 @@ ln -s /data/oacd/geog0121 data
 
 conda config --add envs_dirs /opt/conda_envs/
 
-cd Desktop
+cd ~/Desktop
 ln -s /data/oacd/geog0121 geog0121_data
 ln -s /opt/PanoplyJ/panoply.sh panoply
 ln -s ~/Documents/geog0121/open_geog0121_JupyterLab.sh geog0121_JupyterLab 
